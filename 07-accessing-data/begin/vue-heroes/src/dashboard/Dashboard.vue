@@ -1,12 +1,13 @@
 <template>
     <div v-if="courses" class="content-container">
-        <div v-for="course in courses" :key="course.CourseId" class="section content-title-group">
+        <div v-for="course in courses" :key="course.CourseId" class="section content-title-group"
+            style="padding-bottom: 0px;">
             <h2 class="title">{{course.Title}}</h2>
             <div class="columns">
-                <div class="column is-8" v-if="course.themes">
-                    <ul>
-                        <li v-for="theme in course.themes" :key="theme.ThemeId">
-                            <div class="card">
+                <div class="column is-4" v-if="course.themes">
+                    <ul style="display: flex;">
+                        <li style="padding: 10px;" v-for="theme in course.themes" :key="theme.ThemeId">
+                            <div class="card" style="margin-bottom:0;">
                                 <div class="card-content">
                                     <div class="content">
                                         <div :key="theme.ThemeTitle" class="name">
