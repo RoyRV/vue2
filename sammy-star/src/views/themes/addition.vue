@@ -1,22 +1,27 @@
 <template>
-    <div class="content-container">
-        <div>
+    <div>
+        <div class="md-layout">
             <h2>Sumas</h2>
         </div>
-        <div>
-            <input v-model="numbers[0].value" type="number" min="0" />
-            <FigureComponent v-bind:number="numbers[0].value" />
-            <div>
-                <img src="../../assets/figures/plus-sign.png" style="width: 50px;" />
+        <div class="md-layout" v-for="(number, index) in numbers" :key="index">
+            <div class="md-layout-item">
+                <md-field>
+                    <md-input v-model="number.value" type="number" min="0"></md-input>
+                </md-field>
+                <FigureComponent v-bind:number="number.value" />
             </div>
-            <input v-model=" numbers[1].value" type="number" />
-            <FigureComponent v-bind:number="numbers[1].value" />
-            <div>
-                <img src="../../assets/figures/equal-sign.png" style="width: 50px;" />
+            <div class="md-layout-item">
+                <img v-if="index+1<numbers.length" src="../../assets/figures/plus-sign.png" style="width: 75px;" />
+                <img v-if="index+1==numbers.length" src="../../assets/figures/equal-sign.png" style="width: 75px;" />
             </div>
-
-            <input v-model="total" readonly />
-            <FigureComponent v-bind:number="total" />
+        </div>
+        <div class="md-layout">
+            <div class="md-layout-item">
+                <md-field>
+                    <md-input :value="total" readonly type="number" min="0"></md-input>
+                </md-field>
+                <FigureComponent v-bind:number="total" />
+            </div>
         </div>
     </div>
 </template>
@@ -30,6 +35,7 @@
                 numbers: [
                     { numberIndex: 0, value: 2 },
                     { numberIndex: 1, value: 4 },
+                    { numberIndex: 2, value: 0 },
                 ]
             }
         },
@@ -37,6 +43,9 @@
             total() {
                 var total = 0;
                 for (let index = 0; index < this.numbers.length; index++) {
+                    if (this.numbers[index].value == '') {
+                        this.numbers[index].value = 0;
+                    }
                     total += parseInt(this.numbers[index].value);
                 }
                 return total;
@@ -44,12 +53,11 @@
         },
         watch: {
             numbers: {
-                immediate: true,
+                immediate: false,
                 deep: true,
                 handler(newValue, oldValue) {
                     for (let index = 0; index < this.numbers.length; index++) {
                         if (this.numbers[index].value == '') {
-                            console.log("a")
                             this.numbers[index].value = 0;
                         }
                         else {
