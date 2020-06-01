@@ -1,9 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router';
 import Index from './views/index.vue';
-// import Heroes from './views/heroes.vue';
-import HeroDetail from './views/hero-detail.vue';
+import CourseDetail from './views/courses/course-detail.vue';
+import ThemeDetail from './views/themes/theme-detail.vue';
 import PageNotFound from './views/page-not-found.vue';
+
+import Addition from './views/themes/addition.vue';
 
 const parseProps = r => ({ id: parseInt(r.params.id) });
 
@@ -23,10 +25,23 @@ export default new Router({
       component: Index,
     },
     {
-      path: '/heroes/:id',
-      name: 'hero-detail',
-      component: HeroDetail,
+      path: '/course/:courseId',
+      name: 'course-detail',
+      component: CourseDetail,
       props: parseProps,
+      children: [
+        {
+          path: '/theme',
+          name: 'theme-detail',
+          component: ThemeDetail,
+          props: parseProps,
+        },
+      ],
+    },
+    {
+      path: '/addition',
+      name: 'addition',
+      component: Addition,
     },
     {
       path: '/about',
