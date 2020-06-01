@@ -57,12 +57,9 @@
                 deep: true,
                 handler(newValue, oldValue) {
                     for (let index = 0; index < this.numbers.length; index++) {
-                        if (this.numbers[index].value == '') {
-                            this.numbers[index].value = 0;
-                        }
-                        else {
-                            this.numbers[index].value = parseInt(this.numbers[index].value);
-                        }
+                        let value = this.numbers[index].value;
+                        value = value == '' ? 0 : parseInt(value);
+                        this.numbers[index].value = value > 100 ? 100 : value;
                     }
                 },
             }

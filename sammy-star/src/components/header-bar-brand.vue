@@ -6,7 +6,7 @@
     <div class="navbar-item nav-home">
       <span class="tour">Learn</span>
       <span class="of">with</span>
-      <span class="heroes">SammyStar</span>
+      <span class="heroes">Sammy</span>
     </div>
     <button class="link navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
       <span aria-hidden="true" />

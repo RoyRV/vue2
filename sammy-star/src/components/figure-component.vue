@@ -7,7 +7,7 @@
                 </div>
             </div>
             <div v-if="number<0">
-                ERROR
+                jejeje
             </div>
         </div>
         <div v-if="!number">
