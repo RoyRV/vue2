@@ -14,7 +14,7 @@
                                 </div>
                             </div>
                             <footer class="card-footer">
-                                <button class="link card-footer-item" @click="selectTheme(theme.ThemeId)">
+                                <button class="link card-footer-item" @click="selectTheme(theme.redirectTo)">
                                     <i class="fas fa-check"></i>
                                     <span>Learn</span>
                                 </button>
@@ -45,9 +45,8 @@
             this.themes = themeService.getThemesByCourseId(this.id);
         },
         methods: {
-            selectTheme(themeId) {
-                console.log("Learn", themeId);
-                this.$router.push({ name: 'addition' })
+            selectTheme(redirectTo) {
+                this.$router.push({ name: redirectTo })
             }
         }
     }

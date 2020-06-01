@@ -6,6 +6,7 @@ import ThemeDetail from './views/themes/theme-detail.vue';
 import PageNotFound from './views/page-not-found.vue';
 
 import Addition from './views/themes/addition.vue';
+import Substraction from './views/themes/substraction.vue';
 
 const parseProps = r => ({ id: parseInt(r.params.id) });
 
@@ -44,6 +45,11 @@ export default new Router({
       component: Addition,
     },
     {
+      path: '/substraction',
+      name: 'substraction',
+      component: Substraction,
+    },
+    {
       path: '/about',
       name: 'about',
       // route level code-splitting
@@ -54,7 +60,7 @@ export default new Router({
     },
     {
       path: '*',
-      component: PageNotFound
+      component: PageNotFound,
     },
   ]
 })

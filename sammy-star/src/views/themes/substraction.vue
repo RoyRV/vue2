@@ -1,24 +1,34 @@
 <template>
     <div>
         <div class="md-layout">
-            <h1>Sumas</h1>
+            <h2>Resta</h2>
         </div>
-        <div class="md-layout" v-for="(number, index) in numbers" :key="index">
+        <div class="md-layout">
             <div class="md-layout-item">
                 <md-field>
-                    <md-input v-model="number.value" type="number" min="0"></md-input>
+                    <md-input v-model="numbers[0].value" type="number" min="0"></md-input>
                 </md-field>
-                <FigureComponent v-bind:number="number.value" />
+                <FigureComponent v-bind:number="numbers[0].value" />
             </div>
             <div class="md-layout-item">
-                <img v-if="index+1<numbers.length" src="../../assets/figures/plus-sign.png" style="width: 75px;" />
-                <img v-if="index+1==numbers.length" src="../../assets/figures/equal-sign.png" style="width: 75px;" />
+                <img src="../../assets/figures/substraction-sign.png" style="width: 75px;" />
             </div>
         </div>
         <div class="md-layout">
             <div class="md-layout-item">
                 <md-field>
-                    <md-input :value="total" readonly type="number" min="0"></md-input>
+                    <md-input v-model="numbers[1].value" type="number" min="0"></md-input>
+                </md-field>
+                <FigureComponent v-bind:number="numbers[1].value" />
+            </div>
+            <div class="md-layout-item">
+                <img src="../../assets/figures/equal-sign.png" style="width: 75px;" />
+            </div>
+        </div>
+        <div class="md-layout">
+            <div class="md-layout-item">
+                <md-field>
+                    <md-input :value="total" readonly type="number"></md-input>
                 </md-field>
                 <FigureComponent v-bind:number="total" />
             </div>
@@ -28,26 +38,26 @@
 <script>
     import FigureComponent from '../../components/figure-component.vue';
     export default {
-        name: 'Addition',
+        name: 'Substraction',
         components: { FigureComponent },
         data() {
             return {
                 numbers: [
                     { numberIndex: 0, value: 2 },
                     { numberIndex: 1, value: 4 },
-                    { numberIndex: 2, value: 0 },
                 ]
             }
         },
         computed: {
             total() {
                 var total = 0;
-                for (let index = 0; index < this.numbers.length; index++) {
-                    if (this.numbers[index].value == '') {
-                        this.numbers[index].value = 0;
-                    }
-                    total += parseInt(this.numbers[index].value);
-                }
+                total = this.numbers[0].value - this.numbers[1].value
+                // for (let index = 0; index < this.numbers.length; index++) {
+                //     if (this.numbers[index].value == '') {
+                //         this.numbers[index].value = 0;
+                //     }
+                //     total -= parseInt(this.numbers[index].value);
+                // }
                 return total;
             }
         },

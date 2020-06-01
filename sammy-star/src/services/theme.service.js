@@ -1,6 +1,6 @@
 const themes = [
-    { CourseId: 1, ThemeId: 1, ThemeTitle: 'Sumas' },
-    { CourseId: 1, ThemeId: 2, ThemeTitle: 'Resta' },
+    { CourseId: 1, ThemeId: 1, ThemeTitle: 'Sumas', redirectTo: 'addition' },
+    { CourseId: 1, ThemeId: 2, ThemeTitle: 'Resta', redirectTo: 'substraction' },
     { CourseId: 1, ThemeId: 3, ThemeTitle: 'Multiplicación' },
     { CourseId: 1, ThemeId: 4, ThemeTitle: 'División' },
 ];

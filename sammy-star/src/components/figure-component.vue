@@ -1,8 +1,13 @@
 <template>
     <div>
         <div v-if="number">
-            <div v-for="index in number" :key="index" style="display: inline-block;">
-                <img src="../assets/figures/apple.png" style="width: 50px;" />
+            <div v-if="number>0">
+                <div v-for="index in number" :key="index" style="display: inline-block;">
+                    <img src="../assets/figures/apple.png" style="width: 50px;" />
+                </div>
+            </div>
+            <div v-if="number<0">
+                ERROR
             </div>
         </div>
         <div v-if="!number">
