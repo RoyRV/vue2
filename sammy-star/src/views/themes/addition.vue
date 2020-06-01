@@ -6,11 +6,16 @@
         <div>
             <input v-model="numbers[0].value" type="number" min="0" />
             <FigureComponent v-bind:number="numbers[0].value" />
-            <div>+</div>
-            <input v-model="numbers[1].value" type="number" />
+            <div>
+                <img src="../../assets/figures/plus-sign.png" style="width: 50px;" />
+            </div>
+            <input v-model=" numbers[1].value" type="number" />
             <FigureComponent v-bind:number="numbers[1].value" />
-            <div>=</div>
-            <input v-model="total" />
+            <div>
+                <img src="../../assets/figures/equal-sign.png" style="width: 50px;" />
+            </div>
+
+            <input v-model="total" readonly />
             <FigureComponent v-bind:number="total" />
         </div>
     </div>
