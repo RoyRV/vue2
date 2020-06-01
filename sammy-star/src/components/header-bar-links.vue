@@ -16,12 +16,12 @@
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      github: 'https://github.com/johnpapa/vue-getting-started',
-      twitter: 'https://twitter.com/john_papa',
-    };
-  },
-};
+  export default {
+    data() {
+      return {
+        github: 'https://github.com/royrv',
+        twitter: 'https://twitter.com/royrv13',
+      };
+    },
+  };
 </script>
