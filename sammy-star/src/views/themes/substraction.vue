@@ -1,31 +1,35 @@
 <template>
-    <div>
+    <div class="column is-10">
         <div class="md-layout">
             <h2>Resta</h2>
         </div>
-        <div class="md-layout">
+        <div class="md-layout" style="margin:10px">
             <div class="md-layout-item">
                 <md-field>
                     <md-input v-model="numbers[0].value" type="number" min="0"></md-input>
                 </md-field>
-                <FigureComponent v-bind:number="numbers[0].value" />
             </div>
             <div class="md-layout-item">
                 <img src="../../assets/figures/substraction-sign.png" style="width: 75px;" />
             </div>
         </div>
-        <div class="md-layout">
+        <div class="md-layout" style="margin:10px">
+            <FigureComponent v-bind:number="numbers[0].value" />
+        </div>
+        <div class="md-layout" style="margin:10px">
             <div class="md-layout-item">
                 <md-field>
                     <md-input v-model="numbers[1].value" type="number" min="0"></md-input>
                 </md-field>
-                <FigureComponent v-bind:number="numbers[1].value" />
             </div>
             <div class="md-layout-item">
                 <img src="../../assets/figures/equal-sign.png" style="width: 75px;" />
             </div>
         </div>
-        <div class="md-layout">
+        <div class="md-layout" style="margin:10px">
+            <FigureComponent v-bind:number="numbers[1].value" />
+        </div>
+        <div class="md-layout" style="margin:10px">
             <div class="md-layout-item">
                 <md-field>
                     <md-input :value="total" readonly type="number"></md-input>
@@ -43,8 +47,8 @@
         data() {
             return {
                 numbers: [
-                    { numberIndex: 0, value: 2 },
-                    { numberIndex: 1, value: 4 },
+                    { numberIndex: 0, value: 10 },
+                    { numberIndex: 1, value: 3 },
                 ]
             }
         },

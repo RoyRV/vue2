@@ -6,8 +6,11 @@
                     <img src="../assets/figures/apple.png" style="width: 50px;" />
                 </div>
             </div>
-            <div v-if="number<0">
-                jejeje
+            <div v-if="number<0" style="display: flex;align-items: center;">
+                <img src="../assets/figures/not_allowed.png" style="width: 50px;" />
+                <div style="display: inline-block;width: 210px;margin:10px;">
+                    <small>Lo sentimos, no puedes quitarte menos de lo que tenias originalmente</small>
+                </div>
             </div>
         </div>
         <div v-if="!number">
