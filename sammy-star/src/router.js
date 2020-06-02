@@ -8,6 +8,7 @@ import PageNotFound from './views/page-not-found.vue';
 import Addition from './views/themes/addition.vue';
 import Substraction from './views/themes/substraction.vue';
 import Multiplication from './views/themes/multiplication.vue';
+import Division from './views/themes/division.vue';
 
 const parseProps = r => ({ id: parseInt(r.params.id) });
 
@@ -54,6 +55,11 @@ export default new Router({
       path: '/multiplication',
       name: 'multiplication',
       component: Multiplication,
+    },
+    {
+      path: '/division',
+      name: 'division',
+      component: Division,
     },
     {
       path: '/about',

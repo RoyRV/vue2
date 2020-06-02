@@ -6,7 +6,7 @@
         <div class="md-layout" style="margin:10px">
             <div class="md-layout-item">
                 <md-field>
-                    <md-input v-model="numbers[0].value" type="number" min="0"></md-input>
+                    <md-input v-model="numbers[0]" type="number" min="0"></md-input>
                 </md-field>
             </div>
             <div class="md-layout-item">
@@ -14,12 +14,12 @@
             </div>
         </div>
         <div class="md-layout" style="margin:10px">
-            <FigureComponent v-bind:number="numbers[0].value" />
+            <FigureComponent v-bind:number="numbers[0]" />
         </div>
         <div class="md-layout" style="margin:10px">
             <div class="md-layout-item">
                 <md-field>
-                    <md-input v-model="numbers[1].value" type="number" min="0"></md-input>
+                    <md-input v-model="numbers[1]" type="number" min="0"></md-input>
                 </md-field>
             </div>
             <div class="md-layout-item">
@@ -27,11 +27,11 @@
             </div>
         </div>
         <div class="md-layout" style="margin:10px">
-            <FigureComponent v-bind:number="numbers[1].value" />
+            <FigureComponent v-bind:number="numbers[1]" />
         </div>
         <div class="md-layout" style="margin:10px">
             <div class="md-layout-item">
-                <md-field>
+                <md-field v-if="numbers[0]>=numbers[1]">
                     <md-input :value="total" readonly type="number"></md-input>
                 </md-field>
                 <FigureComponent v-bind:number="total" />
@@ -46,23 +46,12 @@
         components: { FigureComponent },
         data() {
             return {
-                numbers: [
-                    { numberIndex: 0, value: 10 },
-                    { numberIndex: 1, value: 3 },
-                ]
+                numbers: [10, 3]
             }
         },
         computed: {
             total() {
-                var total = 0;
-                total = this.numbers[0].value - this.numbers[1].value
-                // for (let index = 0; index < this.numbers.length; index++) {
-                //     if (this.numbers[index].value == '') {
-                //         this.numbers[index].value = 0;
-                //     }
-                //     total -= parseInt(this.numbers[index].value);
-                // }
-                return total;
+                return this.numbers[0] - this.numbers[1];
             }
         },
         watch: {
@@ -71,12 +60,9 @@
                 deep: true,
                 handler(newValue, oldValue) {
                     for (let index = 0; index < this.numbers.length; index++) {
-                        if (this.numbers[index].value == '') {
-                            this.numbers[index].value = 0;
-                        }
-                        else {
-                            this.numbers[index].value = parseInt(this.numbers[index].value);
-                        }
+                        let value = this.numbers[index];
+                        value = value == '' ? 0 : parseInt(this.numbers[index]);
+                        this.numbers[index] = value;
                     }
                 },
             }

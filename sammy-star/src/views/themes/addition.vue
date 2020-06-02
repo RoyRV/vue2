@@ -4,7 +4,7 @@
             <h1>Sumas</h1>
         </div>
         <div class="md-layout">
-            <div class="md-layout-item  column is-2">
+            <div class="md-layout-item column is-2">
                 <md-field>
                     <md-input v-model="numbers[0]" type="number" min="0"></md-input>
                 </md-field>
