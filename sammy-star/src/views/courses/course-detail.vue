@@ -1,5 +1,5 @@
 <template>
-    <div class="content-container column is-12">
+    <div class="content-container column is-10">
         <div class="md-layout">
             <!-- <div>Course Detail : {{id}}</div> -->
         </div>

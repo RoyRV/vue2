@@ -3,7 +3,7 @@
         <div class="md-layout">
             <h2>Multiplicación</h2>
         </div>
-        <div class="md-layout" style="margin:10px">
+        <div class="md-layut" style="margin:10px">
             <div class="md-layout-item column is-2">
                 <md-field>
                     <md-input v-model="numbers[0].value" type="number" min="0"></md-input>
