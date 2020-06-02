@@ -1,4 +1,4 @@
-import Vue from 'vue'
+import Vue from 'vue';
 import Router from 'vue-router';
 import Index from './views/index.vue';
 import CourseDetail from './views/courses/course-detail.vue';
@@ -7,6 +7,7 @@ import PageNotFound from './views/page-not-found.vue';
 
 import Addition from './views/themes/addition.vue';
 import Substraction from './views/themes/substraction.vue';
+import Multiplication from './views/themes/multiplication.vue';
 
 const parseProps = r => ({ id: parseInt(r.params.id) });
 
@@ -50,6 +51,11 @@ export default new Router({
       component: Substraction,
     },
     {
+      path: '/multiplication',
+      name: 'multiplication',
+      component: Multiplication,
+    },
+    {
       path: '/about',
       name: 'about',
       // route level code-splitting
@@ -62,5 +68,5 @@ export default new Router({
       path: '*',
       component: PageNotFound,
     },
-  ]
-})
+  ],
+});

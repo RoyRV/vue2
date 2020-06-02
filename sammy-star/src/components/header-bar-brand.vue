@@ -4,8 +4,8 @@
       <i class="fab js-logo fa-vuejs fa-2x" aria-hidden="true" />
     </a>
     <div class="navbar-item nav-home">
-      <span class="tour">Learn</span>
-      <span class="of">with</span>
+      <span class="tour">Aprende</span>
+      <span class="of">Con</span>
       <span class="heroes">Sammy</span>
     </div>
     <button class="link navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">

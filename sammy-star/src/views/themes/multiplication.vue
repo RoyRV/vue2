@@ -9,7 +9,7 @@
                     <md-input v-model="numbers[0].value" type="number" min="0"></md-input>
                 </md-field>
             </div>
-            <div class="md-layout-item column is-2">
+            <div class="md-layout-item column is-2" style="text-align: center;">
                 <img src="../../assets/figures/multiplication-sign.png" style="width: 75px;" />
             </div>
             <div class="md-layout-item column is-2">

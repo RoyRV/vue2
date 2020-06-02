@@ -1,9 +1,11 @@
 <template>
-    <div class="content-container">
-        <div>Course Detail : {{id}}</div>
-        <div class="columns">
-            <div class="column is-4" v-if="themes">
-                <ul style="display: flex;">
+    <div class="content-container column is-12">
+        <div class="md-layout">
+            <!-- <div>Course Detail : {{id}}</div> -->
+        </div>
+        <div class="md-layout">
+            <div v-if="themes">
+                <ul>
                     <li style="padding: 10px;" v-for="theme in themes" :key="theme.ThemeId">
                         <div class="card" style="margin-bottom:0;">
                             <div class="card-content">
@@ -16,7 +18,7 @@
                             <footer class="card-footer">
                                 <button class="link card-footer-item" @click="selectTheme(theme.redirectTo)">
                                     <i class="fas fa-check"></i>
-                                    <span>Learn</span>
+                                    <span>Aprender</span>
                                 </button>
                             </footer>
                         </div>
@@ -24,6 +26,7 @@
                 </ul>
             </div>
         </div>
+    </div>
     </div>
 </template>
 <script>
