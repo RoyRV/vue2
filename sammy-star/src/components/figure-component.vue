@@ -9,7 +9,7 @@
             <div v-if="number<0" style="display: flex;align-items: center;">
                 <img src="../assets/figures/not_allowed.png" style="width: 50px;" />
                 <div style="display: inline-block;width: 210px;margin:10px;">
-                    <small>Lo sentimos, no puedes quitarte menos de lo que tenias originalmente</small>
+                    <small>{{errormsg}}</small>
                 </div>
             </div>
         </div>
@@ -24,6 +24,10 @@
         props: {
             number: {
                 type: Number
+            },
+            errormsg: {
+                type: String,
+                default: 'Lo sentimos, no puedes quitarte menos de lo que tenias originalmente'
             }
         }
     }

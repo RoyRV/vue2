@@ -25,12 +25,12 @@
         </div>
         <div class="md-layout">
             <div class="md-layout-item">
-                <div v-for="(number, index) in numbers" :key="index">
+                <div v-for="(number, index) in numbers" :key="index" style="display: inline-block;margin :0px 10px;">
                     <FigureComponent v-if="number" v-bind:number="number"
-                        style="border: 1px solid black;display: inline-block;" />
+                        style="border: 1px solid black;display: inline-block;margin:5px 0px" />
                 </div>
                 <FigureComponent v-if="total==0" v-bind:number="0"
-                    style="border: 1px solid black;display: inline-block;" />
+                    style="border: 1px solid black;display: inline-block; " />
             </div>
         </div>
     </div>

@@ -3,6 +3,11 @@ const themes = [
     { CourseId: 1, ThemeId: 2, ThemeTitle: 'Resta', redirectTo: 'substraction' },
     { CourseId: 1, ThemeId: 3, ThemeTitle: 'Multiplicación', redirectTo: 'multiplication' },
     { CourseId: 1, ThemeId: 4, ThemeTitle: 'División', redirectTo: 'division' },
+    { CourseId: 1, ThemeId: 5, ThemeTitle: 'Operaciones Combinadas', redirectTo: 'division' },
+    { CourseId: 1, ThemeId: 6, ThemeTitle: 'Exponenciación', redirectTo: 'division' },
+    { CourseId: 1, ThemeId: 7, ThemeTitle: 'Raices', redirectTo: 'division' },
+    { CourseId: 1, ThemeId: 8, ThemeTitle: 'MCM', redirectTo: 'division' },
+    { CourseId: 1, ThemeId: 9, ThemeTitle: 'MCD', redirectTo: 'division' },
 ];
 
 const getThemesByCourseId = function (courseId) {

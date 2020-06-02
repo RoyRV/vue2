@@ -6,7 +6,7 @@
         <div class="md-layout">
             <div class="md-layout-item column is-2">
                 <md-field>
-                    <md-input v-model="numbers[0].value" type="number" min="0"></md-input>
+                    <md-input v-model="numbers[0]" type="number" min="0"></md-input>
                 </md-field>
             </div>
             <div class="md-layout-item column is-2" style="text-align: center;">
@@ -14,8 +14,23 @@
             </div>
             <div class="md-layout-item column is-2">
                 <md-field>
-                    <md-input v-model="numbers[1].value" type="number" min="0"></md-input>
+                    <md-input v-model="numbers[1]" type="number" min="0"></md-input>
                 </md-field>
+            </div>
+        </div>
+        <div v-if="numbers[0]==0 && numbers[1]!=0" class="md-layout">
+            <div class="md-layout-item">
+                <FigureComponent v-bind:number="0" />
+            </div>
+        </div>
+        <div v-if="numbers[0]!=0 && numbers[1]==0" class="md-layout">
+            <div class="md-layout-item">
+                <FigureComponent v-bind:number="-1" />
+            </div>
+        </div>
+        <div class="md-layout">
+            <div class="md-layout-item">
+                {{numbers[0] / numbers[1]}}
             </div>
         </div>
     </div>
@@ -27,10 +42,7 @@
         components: { FigureComponent },
         data() {
             return {
-                numbers: [
-                    { numberIndex: 0, value: 2 },
-                    { numberIndex: 1, value: 3 },
-                ]
+                numbers: [6, 3]
             }
         },
     }
