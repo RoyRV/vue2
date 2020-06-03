@@ -9,6 +9,7 @@ import Addition from './views/themes/addition.vue';
 import Substraction from './views/themes/substraction.vue';
 import Multiplication from './views/themes/multiplication.vue';
 import Division from './views/themes/division.vue';
+import MixedOperations from './views/themes/mixedOperations.vue';
 
 const parseProps = r => ({ id: parseInt(r.params.id) });
 
@@ -42,24 +43,19 @@ export default new Router({
       ],
     },
     {
-      path: '/addition',
-      name: 'addition',
-      component: Addition,
+      path: '/addition', name: 'addition', component: Addition,
     },
     {
-      path: '/substraction',
-      name: 'substraction',
-      component: Substraction,
+      path: '/substraction', name: 'substraction', component: Substraction,
     },
     {
-      path: '/multiplication',
-      name: 'multiplication',
-      component: Multiplication,
+      path: '/multiplication', name: 'multiplication', component: Multiplication,
     },
     {
-      path: '/division',
-      name: 'division',
-      component: Division,
+      path: '/division', name: 'division', component: Division,
+    },
+    {
+      path: '/mixedOperations', name: 'mixedOperations', component: MixedOperations,
     },
     {
       path: '/about',
