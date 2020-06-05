@@ -4,26 +4,23 @@
             <!-- <div>Course Detail : {{id}}</div> -->
         </div>
         <div class="md-layout">
-            <div v-if="themes">
-                <ul>
-                    <li style="padding: 10px;" v-for="theme in themes" :key="theme.ThemeId">
-                        <div class="card" style="margin-bottom:0;">
-                            <div class="card-content">
-                                <div class="content">
-                                    <div :key="theme.ThemeTitle" class="name">
-                                        {{ theme.ThemeTitle}}
-                                    </div>
-                                </div>
+            <div v-for="theme in themes" :key="theme.ThemeId" class="md-layout-item column is-6">
+                <div class="card" style="margin-bottom:0;min-height: 173px;">
+                    <div class="card-content">
+                        <div class="content" style="text-align: center;line-height: 26pt">
+                            <div :key="theme.ThemeTitle" class="name">
+                                {{ theme.ThemeTitle}}
                             </div>
-                            <footer class="card-footer">
-                                <button class="link card-footer-item" @click="selectTheme(theme.redirectTo)">
-                                    <i class="fas fa-check"></i>
-                                    <span>Aprender</span>
-                                </button>
-                            </footer>
                         </div>
-                    </li>
-                </ul>
+                    </div>
+                    <footer class="card-footer">
+                        <button class="link card-footer-item" @click="selectTheme(theme.redirectTo)">
+                            <i class="fas fa-check"></i>
+                            <span>Aprender</span>
+                            <img :src="'/assets/learn.svg'" width="40px" style="margin: 0px 0px 0px 10px;" />
+                        </button>
+                    </footer>
+                </div>
             </div>
         </div>
     </div>
