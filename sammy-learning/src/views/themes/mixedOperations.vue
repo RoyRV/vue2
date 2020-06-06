@@ -4,9 +4,6 @@
             <h1>Operaciones Combinadas</h1>
         </div>
         <div class="md-layout">
-            <canvas id="c" class="" width="600" height="300"></canvas>
-        </div>
-        <div class="md-layout">
             <div class="md-layout-item column is-1">
                 <img src="../../assets/figures/parentheses-open-sign.png" style="height: 75px;" />
             </div>
