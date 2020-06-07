@@ -10,7 +10,8 @@
                 </md-field>
             </div>
             <div class="md-layout-item column is-2">
-                <img src="../../assets/figures/plus-sign.png" style="width: 75px;" />
+                <img :src="'/assets/plus.svg'" style="width: 60px;" />
+
             </div>
             <div class="md-layout-item  column is-2">
                 <md-field>
@@ -18,7 +19,7 @@
                 </md-field>
             </div>
             <div class="md-layout-item column is-2">
-                <img src="../../assets/figures/equal-sign.png" style="width: 75px;" />
+                <img :src="'/assets/equal.svg'" style="width: 60px;" />
             </div>
         </div>
         <div class="md-layout">

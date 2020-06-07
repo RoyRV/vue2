@@ -10,7 +10,7 @@
                 </md-field>
             </div>
             <div class="md-layout-item">
-                <img src="../../assets/figures/substraction-sign.png" style="width: 75px;" />
+                <img :src="'/assets/minus.svg'" style="width: 60px;" />
             </div>
         </div>
         <div class="md-layout" style="margin:10px">
@@ -22,12 +22,11 @@
                     <md-input v-model="numbers[1]" type="number" min="0"></md-input>
                 </md-field>
             </div>
-            <div class="md-layout-item">
-                <img src="../../assets/figures/equal-sign.png" style="width: 75px;" />
+            <div class="md-layout-item"><img :src="'/assets/equal.svg'" style="width: 60px;" />
             </div>
         </div>
-        <div class="md-layout" style="margin:10px">
-            <FigureComponent v-bind:number="numbers[1]" />
+        <div v-if="numbers[1]<=numbers[0]" class="md-layout" style="margin:10px">
+            <FigureComponent :number="numbers[1]" :iconSvg="'/assets/eaten-apple.svg'" />
         </div>
         <div class="md-layout" style="margin:10px">
             <div class="md-layout-item">

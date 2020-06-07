@@ -16,7 +16,7 @@
 				</md-field>
 			</div>
 			<div class="md-layout-item column is-1">
-				<img src="../../assets/figures/substraction-sign.png" style="height: 75px;" />
+				<img :src="'/assets/minus.svg'" style="width: 60px;" />
 			</div>
 			<div class="md-layout-item column is-1">
 				<md-field>
@@ -27,7 +27,7 @@
 				<img src="../../assets/figures/parentheses-close-sign.png" style="height: 75px;" />
 			</div>
 			<div class="md-layout-item column is-1">
-				<img src="../../assets/figures/multiplication-sign.png" style="height: 75px;" />
+				<img :src="'/assets/multiplication.svg'" style="width: 60px;" />
 			</div>
 			<div class="md-layout-item column is-1">
 				<md-field>
@@ -35,7 +35,7 @@
 				</md-field>
 			</div>
 			<div class="md-layout-item column is-1">
-				<img src="../../assets/figures/equal-sign.png" style="height: 75px;" />
+				<img :src="'/assets/equal.svg'" style="width: 60px;" />
 			</div>
 		</div>
 		<div v-if="numbers[2]==0">

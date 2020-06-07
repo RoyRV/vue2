@@ -10,7 +10,7 @@
                 </md-field>
             </div>
             <div class="md-layout-item column is-2" style="text-align: center;">
-                <img src="../../assets/figures/multiplication-sign.png" style="width: 75px;" />
+                <img :src="'/assets/multiplication.svg'" style="width: 60px;" />
             </div>
             <div class="md-layout-item column is-2">
                 <md-field>
