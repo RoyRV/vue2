@@ -8,15 +8,15 @@
             <li id="tool-pencil" :class="{ active: selectedToolIdx === 0 }" @click="changeTool(0)">
                 <img src="../assets/edit.svg" />
             </li>
-            <li id="tool-eraser" :class="{ active: selectedToolIdx === 1 }" @click="changeTool(1)">
+            <!-- <li id="tool-eraser" :class="{ active: selectedToolIdx === 1 }" @click="changeTool(1)">
                 <img src="../assets/eraser.svg" />
-            </li>
+            </li> -->
             <li id="tool-reset" @click="reset">
                 <img src="../assets/reset.svg" />
             </li>
-            <li id="tool-color-palette" @click="showColorPalette()">
+            <!-- <li id="tool-color-palette" @click="showColorPalette()">
                 <img src="../assets/color-palette.svg" />
-            </li>
+            </li> -->
             <li id="tool-download" @click="download()">
                 <img src="../assets/download.svg" />
             </li>
